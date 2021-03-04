@@ -1,0 +1,77 @@
+{
+	"id": "com.sap.sample.coloredbox",
+	"version": "1.0.0",
+	"name": "Colored Box",
+	"description": "Do not use! A colored box",
+	"newInstancePrefix": "ColoredBox",
+	"icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAA3NCSVQICAjb4U/gAAAAb1BMVEX///+ZmZl4dXdBPj9hYGGOjpE6ODo8OjwvLC0lISIpJSaMiooyLzH/cjMxLi9GREb/ZSk2MzV9fX1MSks4NjcrJyn/WR9ycnJRT1AtKiv/TRVdXF1ra2v7VCfJyMk+PD6tra+rqqtUUlU0MTNqaGpjxDg2AAAAAXRSTlMAQObYZgAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAKhJREFUGNM9z9EagiAMBeDpEGkWNAGhqFTq/Z8xwK/+q7PtZgeg6npEMcBPJ0d1Kmg6ZnFGRZcLESnR7tpoouuVSCPPZYHWee+XxTsrvQeYQrwV97tL5uZigMeoqucTUSnWEVBX4fWaW2BYz1W3bXsLDPldcD8MoYZ3glmMjNbGLJk5igDgnLTGHazdAPo1Gdms2bZXhRmbMuNR5rNWJuX075sMYg57jV94IQ2Xqt1atQAAAABJRU5ErkJggg==",
+	"vendor": "SAP",
+	"eula": "",
+	"license": "",
+	"webcomponents": [
+		{
+			"kind": "main",
+			"tag": "com-sap-sample-coloredbox",
+			"url": "https://github.wdf.sap.corp/pages/I535843/TMP_PDF_SACCustomWidget/coloredbox.js",
+			"integrity": "sha256-458acde5348372ac9054cfdd15809aff4b8dac1c85637494016d3c1b311a5453",
+			"ignoreIntegrity": true
+		},
+		{
+			"kind": "styling",
+			"tag": "com-sap-sample-coloredbox-styling",
+			"url": "https://github.wdf.sap.corp/pages/I535843/TMP_PDF_SACCustomWidget/coloredbox_styling.js",
+			"integrity": "sha256-2d2ba3629d3c6989828ab616611aa824dfe5c37bee9cc72b51b79c8bdbd79ab9",
+			"ignoreIntegrity": true
+		},
+		{
+			"kind": "builder",
+			"tag": "com-sap-sample-coloredbox-builder",
+			"url": "https://github.wdf.sap.corp/pages/I535843/TMP_PDF_SACCustomWidget/coloredbox_builder.js",
+			"integrity": "sha256-4e217e6ae0f8ec78db35b789051ee6bbc8b8b1338cfd9ea336a3164e1839c12c",
+			"ignoreIntegrity": true
+		}
+	],
+	"properties": {
+		"color": {
+			"type": "string",
+			"description": "Background color",
+			"default": "red"
+		},
+		"opacity": {
+			"type": "number",
+			"description": "Opacity",
+			"default": 1
+		},
+		"width": {
+			"type": "integer",
+			"default": 100
+		},
+		"height": {
+			"type": "integer",
+			"default": 100
+		}
+	},
+	"methods": {
+		"setColor": {
+			"description": "Sets the background color.",
+			"parameters": [
+				{
+					"name": "newColor",
+					"type": "string",
+					"description": "The new background color"
+				}
+			],
+			"body": "this.color = newColor;"
+		},
+		"getColor": {
+			"returnType": "string",
+			"description": "Returns the background color.",
+			"body": "return this.color;"
+		}
+	},
+	"events": {
+		"onClick": {
+			"description": "Called when the user clicks the Colored Box."
+		}
+	}
+}
